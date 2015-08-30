@@ -45,6 +45,10 @@ func (p *Provider) ThatString(actual string) *String {
 	return &String{p.logFacade, actual}
 }
 
+func (p *Provider) ThatMap(actual map[interface{}]interface{}) *MapType {
+	return &MapType{p.logFacade, actual}
+}
+
 type testingT interface {
 	Fail()
 }
